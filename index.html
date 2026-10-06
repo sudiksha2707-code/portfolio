@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudiksha Gupta | Aspiring Product Manager</title>
+<meta name="description" content="Portfolio of Sudiksha Gupta, Aspiring Product Manager: product strategy, execution and GTM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf7f2; --card:#ffffff; --ink:#1f1d1a; --muted:#6b665e;
+    --line:#e8e2d8; --accent:#c2502a; --accent-soft:#f6e3da;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+  /* Nav */
+  nav{position:sticky;top:0;background:rgba(250,247,242,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+  nav .logo{font-family:Fraunces,serif;font-weight:700;font-size:20px;color:var(--ink)}
+  nav ul{display:flex;gap:22px;list-style:none;font-size:14px;font-weight:500}
+  nav ul a{color:var(--muted)}
+  nav ul a:hover{color:var(--accent);text-decoration:none}
+
+  /* Hero */
+  header{padding:90px 0 70px}
+  .eyebrow{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:13px;padding:5px 12px;border-radius:99px;margin-bottom:22px}
+  h1{font-family:Fraunces,serif;font-size:clamp(40px,7vw,64px);line-height:1.08;font-weight:700;letter-spacing:-1px}
+  h1 span{color:var(--accent)}
+  .tagline{font-size:19px;color:var(--muted);max-width:640px;margin:22px 0 32px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;font-size:15px;border:1.5px solid var(--ink)}
+  .btn.primary{background:var(--ink);color:#fff}
+  .btn.ghost{color:var(--ink)}
+  .btn:hover{text-decoration:none;transform:translateY(-1px)}
+
+  /* Sections */
+  section{padding:60px 0;border-top:1px solid var(--line)}
+  h2{font-family:Fraunces,serif;font-size:32px;margin-bottom:8px}
+  .sub{color:var(--muted);margin-bottom:34px}
+  h3{font-size:19px;font-weight:600}
+
+  /* Cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+  .card:hover{box-shadow:0 10px 30px rgba(0,0,0,.06);transform:translateY(-3px)}
+  .tag{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--accent);margin-bottom:10px}
+  .card p{color:var(--muted);font-size:15px;margin:10px 0}
+  .card .finding{background:var(--bg);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;font-size:14px;color:var(--ink)}
+  .card .more{margin-top:auto;padding-top:16px;font-weight:600;font-size:14px}
+
+  /* Experience */
+  .job{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px;margin-bottom:20px}
+  .job-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .job-head .co{color:var(--accent);font-weight:600}
+  .date{color:var(--muted);font-size:14px}
+  .job ul{padding-left:18px}
+  .job li{margin-bottom:8px;color:#3b3833}
+  .job li b{color:var(--ink)}
+
+  /* Skills */
+  .skills{display:grid;gap:22px}
+  .skills h3{font-size:15px;margin-bottom:10px;color:var(--muted);font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{background:var(--card);border:1px solid var(--line);padding:6px 13px;border-radius:99px;font-size:14px}
+
+  /* Education */
+  .edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+
+  /* Contact */
+  .contact{background:var(--ink);color:#fff;border-radius:20px;padding:50px 34px;text-align:center}
+  .contact h2{color:#fff}
+  .contact p{color:#cfc9bf;margin-bottom:26px}
+  .contact .btn{border-color:#fff}
+  .contact .btn.primary{background:#fff;color:var(--ink)}
+  .contact .btn.ghost{color:#fff}
+  .contact .btns{justify-content:center}
+
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:40px 0}
+
+  @media (max-width:640px){
+    nav ul{display:none}
+    header{padding:60px 0 50px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#">Sudiksha Gupta</a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header>
+  <div class="wrap">
+    <span class="eyebrow">Aspiring Product Manager</span>
+    <h1>Turning real problems into <span>products people use.</span></h1>
+    <p class="tagline">I spotted a gap in small-factory procurement and built an SQL-backed system now in active use at Hard Chrome Tech. I work across product strategy, execution and GTM, and use AI and automation to move faster.</p>
+    <div class="btns">
+      <a class="btn primary" href="#work">See my work</a>
+      <a class="btn ghost" href="Sudiksha-Resume.pdf" target="_blank">Download resume</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ WORK / CASE STUDIES ============ -->
+<section id="work">
+  <div class="wrap">
+    <h2>Selected work</h2>
+    <p class="sub">Real products I've built, product case studies, and automations.</p>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="tag">Build · Real product</div>
+        <h3>Procurement System for Hard Chrome Tech</h3>
+        <p>Designed and built an SQL-backed system covering vendors, items, POs, invoices, payments, a vendor ledger and a dashboard, replacing manual tracking.</p>
+        <div class="finding"><b>Outcome:</b> Now in active use by the business every day.</div>
+        <!-- 👇 Replace # with your link -->
+        <a class="more" href="#" target="_blank">View project ↗</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Case study · HelloPM</div>
+        <h3>Zomato Reorder Drop-off</h3>
+        <p>Analyzed why users drop off at the reorder step.</p>
+        <div class="finding"><b>Finding:</b> Friction in re-selecting past items and unclear price/ETA changes cause abandonment. Proposed one-tap reorder with price/ETA confirmation, prioritized by impact vs effort.</div>
+        <!-- 👇 Replace # with your link -->
+        <a class="more" href="#" target="_blank">Read case study ↗</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Case study</div>
+        <h3>Pinterest Product Analysis</h3>
+        <p>Evaluated user flows, pros, cons and bugs.</p>
+        <div class="finding"><b>Finding:</b> Discovery is strong, but the path from saved ideas to action is weak. Recommended a better save-to-action flow and board organization, measured by save-to-click rate.</div>
+        <!-- 👇 Replace # with your link -->
+        <a class="more" href="#" target="_blank">Read case study ↗</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Case study · Research</div>
+        <h3>Procurement for Small Factories</h3>
+        <p>Small mills and factories lack a structured way to track POs, vendor dues and spend.</p>
+        <div class="finding"><b>Approach:</b> Researched existing procurement systems, defined user needs, and shaped the solution approach that became the live product.</div>
+        <!-- 👇 Replace # with your link -->
+        <a class="more" href="#" target="_blank">Read case study ↗</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Automation · n8n</div>
+        <h3>n8n Email Automations</h3>
+        <p>Automated day-to-day work such as outreach and sales follow-ups, cutting repetitive manual effort for the team.</p>
+        <!-- 👇 Replace # with your link -->
+        <a class="more" href="#" target="_blank">See workflow ↗</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="sub">Where I've learned to ship, align teams and go to market.</p>
+
+    <div class="job">
+      <div class="job-head">
+        <div><h3>Founder's Office Intern</h3><span class="co">Perfect Ventures</span></div>
+        <span class="date">Jun 2026 – Sep 2026</span>
+      </div>
+      <ul>
+        <li><b>0→1 GTM:</b> Joined as Meesho AI Services (MAS) was launching; helped define target segments, ICPs, positioning, value proposition and outreach channels.</li>
+        <li><b>Customer discovery:</b> Researched target companies and decision-makers, mapped pain points, and refined the pitch and demo flow through mock client calls and early feedback.</li>
+        <li><b>Onboarding & funnel:</b> Built the consultant network and onboarded clients end to end, learning how product, customer needs, sales and revenue connect.</li>
+        <li><b>Market & competitor research:</b> Studied segments and competitors across India and global markets to inform positioning.</li>
+        <li><b>Execution:</b> Tracked initiatives with leadership and used n8n and AI-assisted workflows to speed up outreach and follow-ups.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div><h3>Project Coordinator</h3><span class="co">Codven Solutions</span></div>
+        <span class="date">May 2025 – Apr 2026</span>
+      </div>
+      <ul>
+        <li><b>Delivery ownership:</b> Owned projects across the full lifecycle (discovery, planning, execution, launch, closure) as the single point of contact between business, design and tech.</li>
+        <li><b>Requirements to execution:</b> Gathered stakeholder needs, clarified scope and acceptance criteria, and broke them into prioritized, user-story-style tasks.</li>
+        <li><b>Prioritization & trade-offs:</b> Ranked work by impact, effort and deadlines; managed scope changes and dependencies to protect timelines.</li>
+        <li><b>Cross-functional alignment:</b> Ran status syncs, removed blockers and kept teams aligned.</li>
+        <li><b>Risk & visibility:</b> Flagged risks early with mitigation plans; kept trackers and status reports current.</li>
+        <li><b>Product thinking:</b> Questioned the "why" behind each request and validated it against user and business goals.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills & tools</h2>
+    <p class="sub">What I bring to a product team.</p>
+    <div class="skills">
+      <div>
+        <h3>Product</h3>
+        <div class="chips">
+          <span class="chip">Requirement analysis</span><span class="chip">Prioritization</span><span class="chip">GTM</span><span class="chip">User research</span><span class="chip">Market research</span><span class="chip">Case analysis</span><span class="chip">Stakeholder management</span>
+        </div>
+      </div>
+      <div>
+        <h3>Data & tools</h3>
+        <div class="chips">
+          <span class="chip">SQL</span><span class="chip">GA4</span><span class="chip">Google Search Console</span><span class="chip">Advanced Excel</span><span class="chip">Figma</span><span class="chip">Notion</span><span class="chip">n8n</span><span class="chip">LinkedIn Sales Navigator</span><span class="chip">Apollo</span><span class="chip">Lusha</span><span class="chip">Lemlist</span>
+        </div>
+      </div>
+      <div>
+        <h3>AI</h3>
+        <div class="chips">
+          <span class="chip">AI tools</span><span class="chip">Prompt writing</span><span class="chip">Workflow automation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education">
+  <div class="wrap">
+    <h2>Education & certifications</h2>
+    <p class="sub">&nbsp;</p>
+    <div class="edu">
+      <div class="card">
+        <div class="tag">2022 – 2025</div>
+        <h3>BBA, Marketing Specialisation</h3>
+        <p>IIMT Group of Colleges · CGPA 7.2/10</p>
+      </div>
+      <div class="card">
+        <div class="tag">Certifications</div>
+        <h3>Continuous learning</h3>
+        <p>Product Management Certification, HelloPM (pursuing)<br>Agile Scrum<br>Digital Marketing Fundamentals & SEO, Simplilearn</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Let's build something.</h2>
+      <p>Open to Product Manager and APM roles. I'd love to hear from you.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:sudiksha2707@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://linkedin.com/in/sudiksha-gupta1812" target="_blank">LinkedIn</a>
+        <a class="btn ghost" href="Sudiksha-Resume.pdf" target="_blank">Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Sudiksha Gupta</footer>
+
+</body>
+</html>
